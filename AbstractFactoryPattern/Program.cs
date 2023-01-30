@@ -40,12 +40,21 @@ namespace AbstractFactoryPattern
     //IPHONEFACTORY STUFF
     public interface IPhoneFactory
     {
-        public ISmart GetSmart();
-        public IDumb GetDumb();
+        ISmart GetSmart(); //public?
+        IDumb GetDumb(); //public? 
     }
 
     public class SamsungFactory : IPhoneFactory
     {
+        public ISmart GetSmart() 
+        { 
+            return GetSmart();
+        }
+
+        public IDumb GetDumb()
+        {
+            return GetDumb();
+        }
 
     }
 
