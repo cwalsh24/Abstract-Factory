@@ -16,7 +16,7 @@ namespace AbstractFactoryPattern
     {
         public string getName()
         {
-            return "stuff"; 
+            return "Asha"; 
         }
     }
 
@@ -24,7 +24,7 @@ namespace AbstractFactoryPattern
     {
         public string getName()
         {
-            return "stuff";
+            return "Genie";
         }
     }
 
@@ -32,7 +32,7 @@ namespace AbstractFactoryPattern
     {
         public string getName()
         {
-            return "stuff";
+            return "Primo";
         }
     }
     //IDUMB STUFF ENDS
@@ -40,8 +40,8 @@ namespace AbstractFactoryPattern
     //IPHONEFACTORY STUFF
     public interface IPhoneFactory
     {
-        //public ISmart GetSmart();
-        //public IDumb GetDumb();
+        public ISmart GetSmart();
+        public IDumb GetDumb();
     }
 
     public class SamsungFactory : IPhoneFactory
@@ -70,7 +70,7 @@ namespace AbstractFactoryPattern
     {
         public string getName()
         {
-            return "stuff";
+            return "Lumia";
         }
     }
 
@@ -78,7 +78,7 @@ namespace AbstractFactoryPattern
     {
         public string getName()
         {
-            return "stuff";
+            return "GalaxyS2";
         }
     }
 
@@ -86,7 +86,7 @@ namespace AbstractFactoryPattern
     {
         public string getName()
         {
-            return "stuff";
+            return "Titan";
         }
     }
 
