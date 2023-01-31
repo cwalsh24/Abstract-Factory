@@ -149,24 +149,18 @@ namespace AbstractFactoryPattern
             {
                 case Manufacturers.SAMSUNG:
                     factory = new SamsungFactory();
-                    string dumb = factory.GetDumb().getName();
-                    string smart = factory.GetSmart().getName();
-                    Console.WriteLine(dumb);
-                    Console.WriteLine(smart);
+                    Console.WriteLine("Dumb Phone: " + factory.GetDumb().getName());
+                    Console.WriteLine("Smart Phone: " + factory.GetSmart().getName());
                     break;
                 case Manufacturers.HTC:
                     factory = new HTCFactory();
-                    string dumb1 = factory.GetDumb().getName();
-                    string smart1 = factory.GetSmart().getName();
-                    Console.WriteLine(dumb1);
-                    Console.WriteLine(smart1);
+                    Console.WriteLine("Dumb Phone: " + factory.GetDumb().getName());
+                    Console.WriteLine("Smart Phone: " + factory.GetSmart().getName());
                     break;
                 case Manufacturers.NOKIA:
                     factory = new NokiaFactory();
-                    string dumb2 = factory.GetDumb().getName();
-                    string smart2 = factory.GetSmart().getName();
-                    Console.WriteLine(dumb2);
-                    Console.WriteLine(smart2);
+                    Console.WriteLine("Dumb Phone: " + factory.GetDumb().getName());
+                    Console.WriteLine("Smart Phone: " + factory.GetSmart().getName());
                     break;
                 default:
                     Console.WriteLine("Not a choice");
