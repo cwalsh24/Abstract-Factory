@@ -40,8 +40,8 @@ namespace AbstractFactoryPattern
     //IPHONEFACTORY STUFF
     public interface IPhoneFactory
     {
-        ISmart GetSmart(); //public?
-        IDumb GetDumb(); //public? 
+        ISmart GetSmart();
+        IDumb GetDumb(); 
     }
 
     public class SamsungFactory : IPhoneFactory
@@ -138,12 +138,40 @@ namespace AbstractFactoryPattern
         Manufacturers manu; 
         public PhoneTypeChecker(Manufacturers m)
         {
-
+            manu = m;
+            CheckProducts(); 
         }
 
         public void CheckProducts()
         {
             //set internal factory to correct factory then write both phone types to console
+            switch (manu)
+            {
+                case Manufacturers.SAMSUNG:
+                    factory = new SamsungFactory();
+                    string dumb = factory.GetDumb().getName();
+                    string smart = factory.GetSmart().getName();
+                    Console.WriteLine(dumb);
+                    Console.WriteLine(smart);
+                    break;
+                case Manufacturers.HTC:
+                    factory = new HTCFactory();
+                    string dumb1 = factory.GetDumb().getName();
+                    string smart1 = factory.GetSmart().getName();
+                    Console.WriteLine(dumb1);
+                    Console.WriteLine(smart1);
+                    break;
+                case Manufacturers.NOKIA:
+                    factory = new NokiaFactory();
+                    string dumb2 = factory.GetDumb().getName();
+                    string smart2 = factory.GetSmart().getName();
+                    Console.WriteLine(dumb2);
+                    Console.WriteLine(smart2);
+                    break;
+                default:
+                    Console.WriteLine("Not a choice");
+                    break;
+            }
         }
     }
 
@@ -152,6 +180,14 @@ namespace AbstractFactoryPattern
         static void Main(string[] args)
         {
             //new phoneTypeChecker and pass in an enum run check products, so for all products
+            PhoneTypeChecker check;
+
+            foreach (Manufacturers manu in Enum.GetValues(typeof(Manufacturers)))
+            {
+                PhoneTypeChecker check = new PhoneTypeChecker(Manufacturers.manu);
+                check.CheckProducts();
+            }
+            Console.ReadKey();
         }
     }
 }
