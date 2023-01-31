@@ -47,24 +47,48 @@ namespace AbstractFactoryPattern
     public class SamsungFactory : IPhoneFactory
     {
         public ISmart GetSmart() 
-        { 
-            return GetSmart();
+        {
+            ISmart phone = new GalaxyS2();
+            return phone;
         }
 
         public IDumb GetDumb()
         {
-            return GetDumb();
+            IDumb phone = new Primo();
+            return phone;
         }
 
     }
 
     public class HTCFactory : IPhoneFactory
     {
+        public ISmart GetSmart()
+        {
+            ISmart phone = new Titan();
+            return phone;
+        }
+
+        public IDumb GetDumb()
+        {
+            IDumb phone = new Genie();
+            return phone;
+        }
 
     }
 
     public class NokiaFactory : IPhoneFactory
     {
+        public ISmart GetSmart()
+        {
+            ISmart phone = new Lumia();
+            return phone;
+        }
+
+        public IDumb GetDumb()
+        {
+            IDumb phone = new Asha();
+            return phone;
+        }
 
     }
     //IPHONEFACTORY STUFF ENDS
