@@ -1,4 +1,14 @@
-﻿using System;
+﻿/**
+ * @file FactoryCode.cs
+ * @author Connor Walsh
+ * @date 2023-1-31
+ * @brief AbstractFactoryPattern factory class implementation
+ * 
+ * This file contains the implementation code for and the interface of the IPhoneFactory classes. 
+ * It also contains the Manufacturers enumerator and the PhoneTypeChecker class for testing
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -79,7 +89,6 @@ namespace AbstractFactoryPattern
 
         public void CheckProducts()
         {
-            //set internal factory to correct factory then write both phone types to console
             switch (manu)
             {
                 case Manufacturers.SAMSUNG:

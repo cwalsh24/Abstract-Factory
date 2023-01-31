@@ -1,4 +1,14 @@
-﻿using System;
+﻿/**
+ * @file Program.cs
+ * @author Connor Walsh
+ * @date 2023-1-31
+ * @brief AbstractFactoryPattern driver
+ * 
+ * This is the driver for the AbstractFactoryPattern program. It contains a loop that tests the functionality 
+ * of the phone classes.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
