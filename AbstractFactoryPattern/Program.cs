@@ -184,8 +184,9 @@ namespace AbstractFactoryPattern
 
             foreach (Manufacturers manu in Enum.GetValues(typeof(Manufacturers)))
             {
-                PhoneTypeChecker check = new PhoneTypeChecker(Manufacturers.manu);
-                check.CheckProducts();
+                Console.WriteLine(manu + " Factory");
+                check = new PhoneTypeChecker(manu);
+                Console.WriteLine(); 
             }
             Console.ReadKey();
         }
